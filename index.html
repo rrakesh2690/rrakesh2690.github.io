@@ -31,7 +31,7 @@ if (annyang) {
  	'Select Sorrow': function() { selectSorrow(); responsiveVoice.speak('selecting Sorrow',"UK English Male"); },
  	'Select Anger': function() { selectAnger(); responsiveVoice.speak('selecting Anger', "UK English Male"); },
  	'Select Amused': function() { selectSurprised(); responsiveVoice.speak('selecting Surprised', "UK English Male"); },
-	'Joy' : function() { filerJoy(); responsiveVoice.speak('filtering Joy', "UK English Male"); } ,
+	'Joy' : function() { filterJoy(); responsiveVoice.speak('filtering Joy', "UK English Male"); } ,
 	'start': function() { startover(); responsiveVoice.speak('starting over',"UK English Male"); }
  };
   
@@ -79,9 +79,9 @@ function selectSorrow()
 	activeSheet.getWorksheets()[0].selectMarksAsync('emotion', 'SORROW', 'REPLACE'); 
 	}	
 function filterJoy()
-    {
-    activeSheet.getWorksheets()[0].applyFilterAsync('emotion', 'JOY', tableauSoftware.FilterUpdateType.REPLACE); 
-    }	
+        {
+    	activeSheet.getWorksheets()[0].applyFilterAsync('emotion', 'JOY', tableauSoftware.FilterUpdateType.REPLACE); 
+    	}	
 //Start Viz Over
 function startover()
 	{
